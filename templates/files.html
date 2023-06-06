@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<html>
+<head>
+    <title>File Management</title>
+    <style>
+        nav {
+            position: fixed;
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 10px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div style="margin-top: 50px;">
+        <h1>List of Uploaded Files</h1>
+        <ul>
+        {% for filename, columns in files_dict.items() %}
+            <li>{{ filename }} - Columns: {{ columns|join(', ') }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
+
+{% endblock %}

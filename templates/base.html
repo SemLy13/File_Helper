@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Management</title>
+    <style>
+        nav {
+            text-align: center;
+            background-color: #f8f9fa;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            padding: 10px 0;
+            z-index: 30;
+        }
+        .content {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="/upload" style="margin-right: 15px;">Upload</a>
+        <a href="/files" style="margin-right: 15px;">Files</a>
+       <!-- <a href="/file">Sort</a> -->
+    </nav>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
